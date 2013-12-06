@@ -12,11 +12,13 @@ module.exports = ->
         command: './node_modules/.bin/component build -u component-json,component-coffee -o assets/browser -n noflo-ui -c'
       preview_deps:
         command: 'npm install'
-        stdout: false
-        stderr: false
+        stdout: true
+        stderr: true
         cwd: 'components/noflo-noflo-ui/preview'
       preview_install:
         command: './node_modules/.bin/component install'
+        stdout: true
+        stderr: true
         cwd: 'components/noflo-noflo-ui/preview'
       preview_build:
         command: './node_modules/.bin/component build -u component-json,component-coffee -o ../../../assets/preview/browser -n noflo-ui-preview -c'
